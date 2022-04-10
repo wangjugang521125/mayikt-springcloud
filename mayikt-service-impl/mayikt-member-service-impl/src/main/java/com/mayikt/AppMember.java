@@ -9,5 +9,7 @@ public class AppMember {
     public static void main(String[] args) {
         SpringApplication.run(AppMember.class);
         System.out.println("hhhhhhhh");
+        System.out.println("hhhhhhhh啊啊啊啊");
+
     }
 }

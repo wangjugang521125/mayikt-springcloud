@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mayikt-order-service-impl" />
+        <module name="mayikt-member-service-api" />
+        <module name="mayikt-member-service-impl" />
+        <module name="mayikt-order-service-api" />
+        <module name="mayikt-service-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mayikt-order-servicec-impl" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mayikt-member-service-api" options="-parameters" />
+      <module name="mayikt-member-service-impl" options="-parameters" />
+      <module name="mayikt-order-service-api" options="-parameters" />
+      <module name="mayikt-order-service-impl" options="-parameters" />
+      <module name="mayikt-service-api" options="-parameters" />
+    </option>
+  </component>
+</project>

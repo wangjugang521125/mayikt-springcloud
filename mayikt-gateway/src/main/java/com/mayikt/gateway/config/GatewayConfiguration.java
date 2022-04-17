@@ -1,7 +1,7 @@
 package com.mayikt.gateway.config;
 
 import com.alibaba.csp.sentinel.adapter.gateway.sc.SentinelGatewayFilter;
-import com.alibaba.csp.sentinel.adapter.gateway.sc.exception.SentinelGatewayBlockExceptionHandler;
+import com.mayikt.gateway.handler.JsonSentinelGatewayBlockExceptionHandler;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Bean;
@@ -26,11 +26,17 @@ public class GatewayConfiguration {
         this.serverCodecConfigurer = serverCodecConfigurer;
     }
 
+//    @Bean
+//    @Order(Ordered.HIGHEST_PRECEDENCE)
+//    public SentinelGatewayBlockExceptionHandler sentinelGatewayBlockExceptionHandler() {
+//        // Register the block exception handler for Spring Cloud Gateway.
+//        return new SentinelGatewayBlockExceptionHandler(viewResolvers, serverCodecConfigurer);
+//    }
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
-    public SentinelGatewayBlockExceptionHandler sentinelGatewayBlockExceptionHandler() {
+    public JsonSentinelGatewayBlockExceptionHandler jsonSentinelGatewayBlockExceptionHandler() {
         // Register the block exception handler for Spring Cloud Gateway.
-        return new SentinelGatewayBlockExceptionHandler(viewResolvers, serverCodecConfigurer);
+        return new JsonSentinelGatewayBlockExceptionHandler(viewResolvers, serverCodecConfigurer);
     }
 
     @Bean

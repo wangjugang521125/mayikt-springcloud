@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mayikt-order-service-impl" />
+        <module name="mayikt-gateway" />
         <module name="mayikt-member-service-api" />
         <module name="mayikt-member-service-impl" />
         <module name="mayikt-order-service-api" />
@@ -20,6 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mayikt-gateway" options="-parameters" />
       <module name="mayikt-member-service-api" options="-parameters" />
       <module name="mayikt-member-service-impl" options="-parameters" />
       <module name="mayikt-order-service-api" options="-parameters" />

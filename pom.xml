@@ -15,6 +15,7 @@
         <module>mayikt-service-api/mayikt-order-service-api</module>
         <module>mayikt-service-impl/mayikt-member-service-impl</module>
         <module>mayikt-service-impl/mayikt-order-service-impl</module>
+        <module>mayikt-gateway</module>
     </modules>
 
     <parent>
@@ -25,11 +26,6 @@
 
 
     <dependencies>
-        <!--  springboot 整合web组件-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -39,22 +35,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.0.0.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-sentinel</artifactId>
-            <version>0.2.2.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-nacos</artifactId>
-            <version>1.5.2</version>
         </dependency>
     </dependencies>
 

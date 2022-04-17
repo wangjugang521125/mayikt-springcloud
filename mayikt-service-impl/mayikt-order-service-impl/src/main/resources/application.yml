@@ -9,5 +9,18 @@ spring:
       transport:
         dashboard: 127.0.0.1:8718
       eager: true
+      datasource:
+        ds:
+          nacos:
+            ### nacos连接地址
+            server-addr: 127.0.0.1:8848
+            ## nacos连接的分组
+            group-id: DEFAULT_GROUP
+            ###路由存储规则
+            rule-type: flow
+            ### 读取配置文件的 data-id
+            data-id: meitemayikt-order-sentinel
+            ###  读取培训文件类型为json
+            data-type: json
   application:
     name: mayikt-order

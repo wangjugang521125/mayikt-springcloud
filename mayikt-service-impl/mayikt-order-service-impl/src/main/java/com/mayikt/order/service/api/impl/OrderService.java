@@ -70,4 +70,12 @@ public class OrderService {
         return "该接口已经被限流啦!";
     }
 
+
+
+    @SentinelResource(value = "getOrderSentinel", blockHandler = "getOrderQpsException")
+    @RequestMapping("/getOrderSentinel")
+    public String getOrderSentinel() {
+        return "getOrderSentinel";
+    }
+
 }
